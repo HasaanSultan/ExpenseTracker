@@ -1,15 +1,28 @@
-import React from 'react'
+import React , {useEffect,useState} from 'react'
+
 
 
 export const ShowExpense = ({expense}) => {
+ 
+  const [data,setData]= useState([])
+
+  function deleteTransaction(id){
   
-  console.log(expense,"edd")
+    setData(data.filter(exp => exp.id !== id))
+  }
+  useEffect(()=>{
+    setData(data=>[...data,expense]);
+    console.log(data,"data")
+  },[expense])
   return (
     <>
     
     <h3>expenses</h3>
     <ul className="list">
-  <li key={expense.id}>Date : {expense.date}   Ammount : {expense.amount}</li>
+      {data.map(item=>{
+       return (  <li key={item.id} className='plus'>Date : {item.date}   Ammount : {item.amount} <button onClick={() => deleteTransaction(item.id)} className="delete-btn">x</button></li>)
+      })}
+ 
     </ul>
   </>
   )

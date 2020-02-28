@@ -16,7 +16,7 @@ export const AddTransaction = () => {
       amount: amount
     }
 
-    //AllTransctions.push(newTransaction)sss
+    //AllTransctions.push(newTransaction)
     setTransctions(newTransaction);
   }
 
@@ -25,12 +25,12 @@ export const AddTransaction = () => {
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
+          <label htmlFor="text">Date </label>
           <input type="Date" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter Date..." />
         </div>
         <div className="form-control">
           <label htmlFor="amount"
-            >Amount <br />
+            >Amount 
           </label>
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
