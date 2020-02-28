@@ -4,7 +4,7 @@ export const ShowExpense = ({expense}) => {
   const [data,setData]= useState([])
   const [sort,setSort]= useState(false)
   const [amountSort,setAmount]= useState(false)
-  const [filterList,Setfilter]= useState([])
+  const [filterList,setfilter]= useState([])
 
   function SortByDate(){
     const newdata=[...data]
@@ -45,11 +45,11 @@ export const ShowExpense = ({expense}) => {
                return lc.includes(filter);
       });
       debugger
-     Setfilter(newdata) 
+     setfilter(newdata) 
     }
     else
     {
-      Setfilter([])
+      setfilter([])
     }
   }
 
