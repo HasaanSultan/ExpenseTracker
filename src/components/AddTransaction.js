@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {ShowExpense} from './ShowExpense'
 
 export const AddTransaction = () => {
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(new Date());
   const [amount, setAmount] = useState(0);
 
   const [AllTransctions , setTransctions]= useState()
