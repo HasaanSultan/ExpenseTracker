@@ -22,11 +22,11 @@ export const AddTransaction = () => {
 
   return (
     <>
-      <h3>Add new transaction</h3>
+      <h3>Add new transaction on new Team and reply</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Date </label>
-          <input type="Date" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter Date..." />
+          <input type="Date" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter your Date..." />
         </div>
         <div className="form-control">
           <label htmlFor="amount"
@@ -34,7 +34,7 @@ export const AddTransaction = () => {
           </label>
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn">Add new transaction</button>
       </form>
       {AllTransctions && <ShowExpense expense={AllTransctions}/>}
       
